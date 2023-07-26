@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.AddCourseScreen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/screenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="Add Course"
+                android:textSize="40sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/titleLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textSize="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp" />
+
+                <EditText
+                    android:id="@+id/courseTitle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/titleLabel"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/titleLabel"
+                    android:backgroundTint="#022A4E"
+                    android:hint="Course Title" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/startDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:text="Start Date"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/courseStartDate"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/startDateLabel"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/startDateLabel"
+                    android:backgroundTint="#022A4E"
+                    android:hint="DD-MM-YY"
+                    android:inputType="date" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/endDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:text="End Date"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/courseEndDate"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/endDateLabel"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/endDateLabel"
+                    android:backgroundTint="#022A4E"
+                    android:hint="DD-MM-YY"
+                    android:inputType="date" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/progressLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Progress"
+                    android:textSize="20sp"/>
+
+                <RadioGroup
+                    android:id="@+id/progressRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/progressLabel"
+                    android:layout_marginStart="6dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/completeRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#4CAF50"
+                        android:text="Complete"
+                        android:textSize="13dp"/>
+
+                    <RadioButton
+                        android:id="@+id/inProgressRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#CCC05D"
+                        android:text="In Progress"
+                        android:textSize="13dp"/>
+
+                    <RadioButton
+                        android:id="@+id/droppedRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#F44336"
+                        android:text="Dropped"
+                        android:textSize="13dp"/>
+
+                    <RadioButton
+                        android:id="@+id/planToTakeRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#020202"
+                        android:text="Plan to Take"
+                        android:textSize="13dp"/>
+
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/instructorNameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:text="Instructor Name"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/instructorName"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/instructorNameLabel"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/instructorNameLabel"
+                    android:backgroundTint="#022A4E"
+                    android:hint="Instructor Name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/instructorPhoneLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:text="Instructor Phone"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/instructorPhone"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/instructorPhoneLabel"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/instructorPhoneLabel"
+                    android:backgroundTint="#022A4E"
+                    android:hint="000-000-0000"
+                    android:inputType="phone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/instructorEmailLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:text="Instructor Email"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/instructorEmail"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/instructorEmailLabel"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/instructorEmailLabel"
+                    android:backgroundTint="#022A4E"
+                    android:hint="example@gmail.com"
+                    android:inputType="textEmailAddress" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/notesLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:text="Notes"
+                    android:textSize="20sp"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/notes"
+                    android:layout_width="250dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignBaseline="@id/notesLabel"
+                    android:layout_toEndOf="@id/notesLabel"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:backgroundTint="#022A4E"
+                    android:hint="Add notes here..."
+                    android:maxLines="5"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/termsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:text="Term"
+                    android:textSize="20sp"/>
+
+                <Spinner
+                    android:id="@+id/associatedTermsSpinner"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@id/termsLabel"
+                    android:layout_toEndOf="@id/termsLabel"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/associatedAssessmentsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:text="Associated Assessments"
+                    android:textSize="20sp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/associatedAssessmentsLabel"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_marginTop="42dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/dark_red_dropped"
+                    android:text="Cancel"/>
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_marginTop="42dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

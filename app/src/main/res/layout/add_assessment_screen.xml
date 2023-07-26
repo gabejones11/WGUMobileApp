@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#022A4E"
+    tools:context=".UI.AddAssessmentScreen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/screenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Add Assessment"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_gravity="center_horizontal"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/objectiveText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="42dp"
+                    android:text="Objective"
+                    android:textSize="20sp"
+                    android:layout_toStartOf="@id/examTypeSwitch"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/performanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="Performance"
+                    android:textSize="20sp"
+                    android:layout_toEndOf="@id/examTypeSwitch"
+                    android:layout_centerVertical="true" />
+
+                <Switch
+                    android:id="@+id/examTypeSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:textColorHighlight="#022A4E"
+                    android:textColorLink="#022A4E"
+                    android:thumbTint="#022A4E"
+                    android:trackTint="#022A4E"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleLabel"
+                    android:text="Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/examTitle"
+                    android:hint="Exam Title"
+                    android:inputType="textPersonName"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignBaseline="@id/titleLabel"
+                    android:layout_toEndOf="@id/titleLabel"
+                    android:backgroundTint="#022A4E"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/startDateLabel"
+                    android:text="Start Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/startDate"
+                    android:hint="MM/DD/YY"
+                    android:inputType="date"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignBaseline="@id/startDateLabel"
+                    android:layout_toEndOf="@id/startDateLabel"
+                    android:backgroundTint="#022A4E"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/endDateLabel"
+                    android:text="End Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/endDate"
+                    android:hint="MM/DD/YY"
+                    android:inputType="date"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignBaseline="@id/endDateLabel"
+                    android:layout_toEndOf="@id/endDateLabel"
+                    android:backgroundTint="#022A4E"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/associatedCourseLabel"
+                    android:text="Course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+                    android:textSize="20sp"/>
+
+                <Spinner
+                    android:id="@+id/associatedCourseSpinner"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@id/associatedCourseLabel"
+                    android:layout_toEndOf="@id/associatedCourseLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_marginTop="42dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/dark_red_dropped"
+                    android:text="Cancel" />
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_marginTop="42dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
