@@ -1,1 +1,1 @@
-# WGUMobileApp
+# WGU Mobile Application
